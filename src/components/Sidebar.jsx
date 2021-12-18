@@ -7,7 +7,6 @@ import PrivateComponent from 'components/PrivateComponent';
 const SidebarLinks = () => (
   <ul className='mt-12'>
     <SidebarRouteImagen to='/perfil' title='Perfil' icon='fas fa-user' />
-    <SidebarRoute to='' title='Inicio' icon='fas fa-home' />
     <PrivateComponent roleList={['ADMINISTRADOR']}>
       <SidebarRoute to='/usuarios' title='Usuarios' icon='fas fa-user' />
     </PrivateComponent>
@@ -19,9 +18,6 @@ const SidebarLinks = () => (
         icon='fas fa-users'
       />
     </PrivateComponent>
-    <SidebarRoute to='/page2' title='Pagina2' icon='fas fa-smile-wink' />
-    <SidebarRoute to='/category1' title='Catego 1' icon='fab fa-amazon' />
-    <SidebarRoute to='/category1/page1' title='Test' icon='fas fa-car' />
     <Logout />
   </ul>
 );
@@ -47,9 +43,9 @@ const Logout = () => {
 
 const Logo = () => (
   <div className='py-3 w-full flex flex-col items-center justify-center'>
-    <img src='logo.png' alt='Logo' className='h-16' />
+    <img src='misiontic.png' alt='Logo' className='h-16' />
     <span className='my-2 text-xl font-bold text-center'>
-      Título de Mi Aplicación
+      Gestión de Proyectos MinTIC
     </span>
   </div>
 );
@@ -57,7 +53,7 @@ const Logo = () => (
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
   return (
-    <div className='flex flex-col md:flex-row flex-no-wrap md:h-full'>
+    <div className='flex flex-col md:flex-row flex-no-wrap md:h-full font-[Arial]'>
       {/* Sidebar starts */}
 
       <div className='sidebar hidden md:flex'>
